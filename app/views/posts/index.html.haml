@@ -1,0 +1,11 @@
+.container
+  .post_header
+    - if user_signed_in? 
+      = link_to image_tag('photo-camera (1).png'), new_post_path, class: 'camera_icon'
+      = link_to 'ログアウト', destroy_user_session_path, method: :delete, class: 'devise_link link_login'
+    - else 
+      = link_to 'ログイン', new_user_session_path, class: 'devise_link link_login'
+  .timeline_title
+    %p ALL POSTS
+  .timeline_container
+    = render 'commons/posts'

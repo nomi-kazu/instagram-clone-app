@@ -1,0 +1,19 @@
+.container
+  - if post.images.attached?
+    - if post.images.size == 3
+      .grid_img
+        .grid_img-1#item-a
+          = image_tag post.images.first, class: 'img'
+        .grid_img-2#item-b
+          = image_tag post.images.second, class: 'img'
+        .grid_img-3#item-c
+          = image_tag post.images.third, class: 'img'
+    - elsif post.images.size == 2
+      .display-flex
+        .display-flex-left
+          = image_tag post.images.first, class: 'flex-img'
+        .display-flex-right
+          = image_tag post.images.second, class: 'flex-img'
+    - else
+      .image-one-box
+        = image_tag post.images.first, class: 'image-first'
