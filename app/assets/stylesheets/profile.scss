@@ -1,0 +1,45 @@
+.profile_header {
+  margin-bottom: 15px;
+}
+
+.profile_username {
+  text-align: center;
+  position: relative;
+  top: -25px;
+  font-weight: bold;
+  pointer-events: none;
+  font-size: 20px;
+}
+
+.profile_usericon {
+  margin-top: 100px;
+  width: 76px;
+  height: 76px;
+  border-radius: 99px;
+  margin: 0 auto;
+  display: block;
+}
+
+.avatar_edit_form {
+  margin-top: 30px;
+}
+
+.avatar_submit_btn {
+  border: none;
+  margin-left: 5px;
+  color: #4f4f4f;
+  background-color: white;
+}
+
+.images_form_avatar {
+  margin-left: 5px;
+  color: #4f4f4f;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 18px;
+  padding-bottom: 15px;
+}
+
+.image_form {
+  display: none;
+}

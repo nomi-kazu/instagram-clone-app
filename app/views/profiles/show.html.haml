@@ -1,0 +1,24 @@
+.container 
+  .profile_header
+    .profile_back_icon
+      = link_to image_tag('back.svg'), :back 
+    .profile_username
+      = current_user.username 
+
+  .avatar
+    - if current_user.profile&.avatar&.attached?
+      = image_tag @user.profile.avatar, class: 'profile_usericon'
+    - else
+      = image_tag 'Ellipse.png', class: 'profile_usericon'
+
+  .avatar_edit_form.hidden
+    = form_with(model: @profile, url: profile_path, method: 'put', local: true ) do |f|
+      %div
+        = f.label :avatar, '画像選択', class: 'avatar_form' do
+          %i.images_form_avatar Select your avatar 
+          = f.file_field :avatar, class: 'images_form'      
+      %div 
+        = f.submit 'SUBMIT', class: 'avatar_submit_btn'
+
+= javascript_pack_tag 'profile'
+          
