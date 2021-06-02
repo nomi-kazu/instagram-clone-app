@@ -1,0 +1,16 @@
+.post_container
+  - @posts.each do |post|
+    .post#post-index{data:{post_id: post.id}}
+      .avatar
+        = link_to profile_path do
+          = image_tag post.user.avatar_image, class: 'usericon'
+      .post_user
+        = post.user.username
+      .post_time
+        %time(datetime='#{post.created_at}')= time_ago_in_words(post.created_at)
+      = render '/commons/images', post: post
+
+      .delete
+        = link_to '削除する', post_path(post.id), data:{method: 'delete', confirm: '本当に削除してもよろしいでしょうか？'}
+
+        

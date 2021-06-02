@@ -1,0 +1,19 @@
+.container
+  = form_with model: @post do |f|
+    .post_new_header
+      %div
+        %p.status_button STATUS 
+      %div
+        = f.submit 'POST', class: 'post_new_button'
+    .usericon
+      = image_tag current_user.avatar_image
+    .post_username
+      %p= current_user.username
+    %div
+      = f.text_field :content, placeholder: "What's on your mind ?", class: 'post_content_form'
+    %div
+      = label :images, '+ Album', class: 'images_input_btn' do
+        %i.images_form_name + Album
+        = f.file_field :images, multiple: true, class: 'images_form'
+
+     
