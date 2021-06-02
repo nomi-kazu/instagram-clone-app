@@ -1,0 +1,5 @@
+= form_with(model: @profile, url: profile_path, method: 'put', local: true ) do |f|
+  %div 
+    = f.file_field :avatar
+  %div 
+    = f.submit 'SUBMIT', class: 'btn btn-outline-secondary'
