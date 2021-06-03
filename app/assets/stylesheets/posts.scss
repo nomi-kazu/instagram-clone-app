@@ -1,0 +1,96 @@
+.post {
+  margin-bottom: 20px;
+}
+
+.camera_icon img {
+  margin-top: 20px;
+  width: 20px;
+  margin-left: 5px;
+}
+
+.usericon {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  float: left;
+}
+
+.post_user {
+  position: relative;
+  left: 8px;
+  margin-bottom: 7px;
+  color: #9e9e9e;
+  font-size: 12px;
+}
+
+.post_content {
+  font-size: 13px;
+}
+
+///icon関連///
+
+.icon_container {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 9px;
+}
+
+.post_heart img{
+  width: 23px;
+  margin-right: 5px;
+}
+
+///new-post///
+
+.post_username {
+  position: relative;
+  top : 3px;
+  left: 10px;
+  font-style: normal;
+  font-size: 18x;
+
+}
+
+.post_content_form {
+  width: 100%;
+  border: none;
+  font-style: normal;
+  border-bottom: 1px solid grey;
+  margin-bottom: 10px;
+  margin-top :20px;
+}
+
+.images_input_btn{
+  display: block;
+  width: 73px;
+  height: 30px;
+  margin-top: 5px;
+  padding-top: 1px;
+  color: white;
+  text-align: center;
+  border: 1px solid #E0E0E0;
+  box-sizing: border-box;
+  border-radius: 4px;
+}
+
+.images_form_name {
+  color: #4F4F4F;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 18px;
+  margin: auto 0;
+  padding-bottom: 15px;
+}
+
+.images_form{
+  padding-top: 15px;
+}
+
+.post_new_header {
+  margin-top : 10px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom : 10px;
+
+  }

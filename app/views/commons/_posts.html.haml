@@ -11,6 +11,21 @@
       = render '/commons/images', post: post
 
       .delete
-        = link_to '削除する', post_path(post.id), data:{method: 'delete', confirm: '本当に削除してもよろしいでしょうか？'}
+        - if user_signed_in? && current_user.id == post.user_id
+          = link_to '削除する', post_path(post.id), data:{method: 'delete', confirm: '本当に削除してもよろしいでしょうか？'}
 
-        
+      .icon_container
+        .like 
+          - if user_signed_in?
+            - if current_user.hasliked?(post)
+              .post_heart.active-heart{class: '#{post.id}', id: '#{post.id}'}
+                = image_tag('heart-active.svg')
+              .post_heart.hidden.inactive-heart{class: '#{post.id}', id: '#{post.id}'}
+                = image_tag('heart.svg')
+            - else
+              .post_heart.inactive-heart{class: '#{post.id}', id: '#{post.id}'}
+                = image_tag('heart.svg')
+              .post_heart.hidden.active-heart{class: '#{post.id}', id: '#{post.id}'}
+                = image_tag('heart-active.svg')
+                
+=javascript_pack_tag 'post'
