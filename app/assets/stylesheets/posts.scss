@@ -40,6 +40,11 @@
   margin-right: 5px;
 }
 
+.icon_button img{
+  width: 23px;
+  margin-left: 10px;
+}
+
 ///new-post///
 
 .post_username {
@@ -92,5 +97,30 @@
   display: flex;
   justify-content: space-between;
   margin-bottom : 10px;
+}
 
-  }
+  ///comment///
+
+.comment_title {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  position: relative;
+  top: -41px;
+  pointer-events: none;
+}
+
+.comment-username {
+  font-size : 16px;
+  text-align: justify;
+  color: #414040;
+}
+.comment-content {
+  font-size: 14px;
+  color: #9B9B9B;
+  margin-top : -10px;
+}
+
+.comment-set {
+  margin-bottom: 15px;
+}

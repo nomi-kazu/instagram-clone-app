@@ -1,6 +1,6 @@
 .post_container
   - @posts.each do |post|
-    .post#post-index{data:{post_id: post.id}}
+    .post#post-show{data:{post_id: post.id}}
       .avatar
         = link_to profile_path do
           = image_tag post.user.avatar_image, class: 'usericon'
@@ -27,5 +27,7 @@
                 = image_tag('heart.svg')
               .post_heart.hidden.active-heart{class: '#{post.id}', id: '#{post.id}'}
                 = image_tag('heart-active.svg')
+        .comment 
+          = link_to image_tag('Vector.png'), post_path(post.id), class: 'icon_button'
                 
 =javascript_pack_tag 'post'

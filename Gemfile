@@ -25,6 +25,7 @@ gem 'devise'
 gem 'haml-rails'
 gem 'bootstrap', '~> 4.1.1'
 gem 'jquery-rails'
+gem 'active_model_serializers'
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
