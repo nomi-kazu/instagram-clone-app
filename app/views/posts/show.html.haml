@@ -1,2 +1,12 @@
-.container 
-  %p.commen_title COMMENT
+.container#post-show{data:{post_id: @post.id}}
+  .comment
+    .comments-container
+  
+  .comment-set 
+    .comment-text-area
+      = text_area_tag :comment_content, '', class: 'sm'
+      .btn-secondary.add-comment-btn
+        Add Comment
+      
+
+= javascript_pack_tag 'post'
